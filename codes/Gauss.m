@@ -1,3 +1,4 @@
+
 % This script is for computing definite integrals using Legendre-Gauss 
 % Quadrature. Computes the Legendre-Gauss nodes and weights  on an interval
 % [a,b] with truncation order N

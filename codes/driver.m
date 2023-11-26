@@ -147,16 +147,16 @@ e_H1(n) = e_h1;
 end
 
 %plot
-% hh = (1./n_el)';
-% plot(log(hh),log(e_L2));hold on;
-% plot(log(hh),log(e_H1));
-% xlabel('log(h)');
-% ylabel('log(error)');
-% title('Relative errors against the mesh size in log-log plot');
-% legend('eL2','eH1','Location','NorthWest');
-% %polyfit
-% t1 = polyfit(log(hh),log(e_L2),1);
-% t2 = polyfit(log(hh),log(e_H1),1);
-% fprintf('The scope of e_L2 is %.1f',t1(1));
-% fprintf('\n');
-% fprintf( 'The scope of e_H1 is %.1f',t2(1));
+hh = (1./n_el)';
+plot(log(hh),log(e_L2));hold on;
+plot(log(hh),log(e_H1));
+xlabel('log(h)');
+ylabel('log(error)');
+title('Relative errors against the mesh size in log-log plot');
+legend('eL2','eH1','Location','NorthWest');
+%polyfit
+t1 = polyfit(log(hh),log(e_L2),1);
+t2 = polyfit(log(hh),log(e_H1),1);
+fprintf('The scope of e_L2 is %.1f',t1(1));
+fprintf('\n');
+fprintf( 'The scope of e_H1 is %.1f',t2(1));

@@ -38,7 +38,7 @@ for inel = 1 : length(N_el)
     n_eq = n_pt - 1; % number of  equation
     
     % generate quadrature rule
-    n_int = 2;
+    n_int = 6;
     [xi,weight] = Gauss(n_int,-1,1);
     K = zeros(n_eq,n_eq);
     F = zeros(n_eq,1);

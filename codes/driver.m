@@ -16,7 +16,7 @@ restart = 10000;
 maxit = 10000;
 
 
-for n = 9 : 9
+for n = 1 : 9
 % generate my mesh
 hh = 1 / n_el(n);
 x_coor = 0 : hh: 1;
@@ -103,15 +103,15 @@ end
 %Solve Kd = F;
 d = K \ F;
 disp = [d;g];
-x1 = gmres(K,F,restart,0.01,maxit);
-x2 = gmres(K,F,restart,0.0001,maxit);
-x3 = gmres(K,F,restart,0.000001,maxit);
-uhh = [d x1 x2 x3;g g g g];
-for i = 1 : 4
-    err(i,:) = uhh(:,i)' - (exact(x_coor));
-    
-end
-err(1,:)-err(3,:)
+% x1 = gmres(K,F,restart,0.01,maxit);
+% x2 = gmres(K,F,restart,0.0001,maxit);
+% x3 = gmres(K,F,restart,0.000001,maxit);
+% uhh = [d x1 x2 x3;g g g g];
+% for i = 1 : 4
+%     err(i,:) = uhh(:,i)' - (exact(x_coor));
+%     
+% end
+% err(1,:)-err(3,:)
 % 总结 tol=0.01时，误差较大，tol = 0.0001和1e-6时，两者算出的值是相同的，且较LU分解计算误差小
 
 %Question b
